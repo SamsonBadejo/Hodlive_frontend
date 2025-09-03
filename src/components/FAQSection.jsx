@@ -17,7 +17,7 @@ const FAQSection = () => {
     setOpenIndex(index); // Open it
     faqRefs.current[index]?.scrollIntoView({
       behavior: "smooth",
-      block: "center",
+      block: "nearest", // smoother scroll than "center"
     });
   };
 
@@ -121,6 +121,7 @@ const FAQSection = () => {
                 <button
                   className="flex items-center justify-between w-full px-6 py-4 text-left cursor-pointer focus:outline-none"
                   onClick={() => toggleQuestion(index)}
+                  aria-expanded={openIndex === index} // ✅ accessibility
                 >
                   <h2 className="text-lg font-medium text-white">
                     {item.question}
@@ -139,7 +140,7 @@ const FAQSection = () => {
                 <AnimatePresence>
                   {openIndex === index && (
                     <motion.div
-                      key="answer"
+                      key={`answer-${item.id}`} // ✅ unique key
                       initial={{ opacity: 0, height: 0 }}
                       animate={{ opacity: 1, height: "auto" }}
                       exit={{ opacity: 0, height: 0 }}
