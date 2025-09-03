@@ -1,13 +1,13 @@
 import React from "react";
 import ContactForm from "../components/ContactForm";
-import FaqSection from "../components/FaqSection";
+import FAQSection from "../components/FAQSection";
 
 const Contact = () => {
   return (
     <div className="flex flex-col min-h-screen bg-gray-900">
       <div>
         <ContactForm />
-        <FaqSection />
+        <FAQSection />
       </div>
     </div>
   );

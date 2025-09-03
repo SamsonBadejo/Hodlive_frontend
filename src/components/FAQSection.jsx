@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { FaPlus, FaMinus } from "react-icons/fa";
 import HeroImg from "../assets/hero_img.jpg";
 
-const FaqSection = () => {
+const FAQSection = () => {
   const [openIndex, setOpenIndex] = useState(null);
 
   // Keep refs for smooth scrolling
@@ -160,4 +160,4 @@ const FaqSection = () => {
   );
 };
 
-export default FaqSection;
+export default FAQSection;
