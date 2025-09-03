@@ -1,7 +1,5 @@
-import React from "react";
 import HeroImg from "../assets/hero_img.jpg";
 import HeroImg2 from "../assets/Pastor Attah.jpg";
-import Title from "../components/title";
 
 const AboutConvener = () => {
   return (
