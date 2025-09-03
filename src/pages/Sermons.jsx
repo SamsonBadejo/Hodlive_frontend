@@ -1,9 +1,8 @@
-import React from "react";
 import SermonsList from "../components/SermonsList";
 
 const Sermons = () => {
   return (
-    <div className="">
+    <div>
       <SermonsList />
     </div>
   );

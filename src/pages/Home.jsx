@@ -15,10 +15,10 @@ const Home = () => {
     <div className="">
       <HeroSection />
 
-      <Title title="SERVICE TIME" />
+      <Title titles="SERVICE TIME" />
       <ServiceTime />
 
-      <Title title="EVENTS" />
+      <Title titles="EVENTS" />
       <div className="bg-[#030629] hidden sm:block md:hidden lg:hidden">
         <EventSwiper />
       </div>
@@ -27,10 +27,10 @@ const Home = () => {
         <EventList />
       </div>
 
-      <Title title="MINISTRY" />
+      <Title titles="MINISTRY" />
       <AboutMinistry />
 
-      <Title title="CONTACT-US" />
+      <Title titles="CONTACT-US" />
       <ContactForm />
     </div>
   );
