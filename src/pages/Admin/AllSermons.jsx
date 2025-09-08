@@ -98,12 +98,11 @@ const SermonsList = () => {
   };
 
   /* ---------------- render ---------------- */
-  if (loading) return <Loading title="Sermons Loading...."/>
-;
+  if (loading) return <Loading title="Sermons Loading...." />;
   if (error) return <p className="text-center mt-24 text-red-600">{error}</p>;
 
   return (
-<div className="px-4 py-8 pt-23 md:px-8 max-w-7xl mx-auto w-full">
+    <div className="px-4 py-8 pt-23 md:px-8 max-w-7xl mx-auto w-full min-h-[calc(100vh-200px)]">
       <Searchbar
         query={query}
         onQueryChange={(v) => {
@@ -115,7 +114,7 @@ const SermonsList = () => {
       />
 
       {filteredSorted.length === 0 ? (
-        <p className="text-center mt-12 text-white text-2xl ">
+        <p className="text-center mt-12 text-white text-2xl">
           No sermons found...
         </p>
       ) : (
