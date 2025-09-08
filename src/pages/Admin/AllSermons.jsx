@@ -103,7 +103,7 @@ const SermonsList = () => {
   if (error) return <p className="text-center mt-24 text-red-600">{error}</p>;
 
   return (
-<div className="px-4 py-8 pt-20 md:px-8 max-w-7xl mx-auto w-full">
+<div className="px-4 py-8 pt-23 md:px-8 max-w-7xl mx-auto w-full">
       <Searchbar
         query={query}
         onQueryChange={(v) => {

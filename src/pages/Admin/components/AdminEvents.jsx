@@ -119,7 +119,7 @@ useEffect(() => {
   }
 
   return (
-    <div className="px-10 py-20 ">
+    <div className="px-10 py-20 pt-10 ">
       {/* Filter + Arrows */}
       <div className="flex justify-between items-center mb-6">
         <button
