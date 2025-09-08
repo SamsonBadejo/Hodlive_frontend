@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { FaArrowLeft, FaArrowRight, FaTrash } from "react-icons/fa";
-import { TbHandClick } from "react-icons/tb";
 import Loading from "../../../components/Loading";
 import toast from "react-hot-toast";
 import api from "../../../services/api"; // axios instance you already have
@@ -70,22 +69,22 @@ export default function EventList() {
   const [page, setPage] = useState(0);
   const eventsPerPage = 4;
 
-const baseURL = import.meta.env.VITE_API_URL || "http://localhost:5001/api";
+  const baseURL = import.meta.env.VITE_API_URL || "http://localhost:5001/api";
 
-useEffect(() => {
-  const fetchEvents = async () => {
-    try {
-      const res = await fetch(`${baseURL}/events`);
-      const data = await res.json();
-      setEvents(data);
-    } catch (err) {
-      console.error("Error fetching events:", err);
-    } finally {
-      setLoading(false);
-    }
-  };
-  fetchEvents();
-}, []);
+  useEffect(() => {
+    const fetchEvents = async () => {
+      try {
+        const res = await fetch(`${baseURL}/events`);
+        const data = await res.json();
+        setEvents(data);
+      } catch (err) {
+        console.error("Error fetching events:", err);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchEvents();
+  }, []);
 
   const today = new Date();
   const sortedEvents = [...events].sort(
@@ -119,7 +118,7 @@ useEffect(() => {
   }
 
   return (
-    <div className="px-10 py-30 pt-30">
+    <div className="px-32 py-20">
       {/* Filter + Arrows */}
       <div className="flex justify-between items-center mb-6">
         <button
@@ -130,7 +129,6 @@ useEffect(() => {
           className="flex items-center gap-2 cursor-pointer px-5 py-2 bg-[#FA971E] text-white font-medium rounded-full shadow hover:bg-[#e38c1d] transition"
         >
           {showUpcoming ? "Show All Events" : "Show Upcoming Events"}
-          {/* <TbHandClick className="hand_icon text-xl" /> */}
         </button>
 
         <div className="flex items-center gap-3">
@@ -152,7 +150,7 @@ useEffect(() => {
       </div>
 
       {/* Event Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
         {currentEvents.map((e) => (
           <AdminEvents
             key={e._id}
