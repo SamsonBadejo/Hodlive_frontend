@@ -118,7 +118,7 @@ export default function EventList() {
   }
 
   return (
-    <div className="px-32 py-20">
+    <div className="px-4 md:px-10 lg:px-32 py-20">
       {/* Filter + Arrows */}
       <div className="flex justify-between items-center mb-6">
         <button
