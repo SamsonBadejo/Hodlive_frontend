@@ -10,7 +10,7 @@ const AdminEvents = ({ e, onDelete }) => {
   const [showDeleteModal, setShowDeleteModal] = useState(false);
 
   return (
-    <div className="rounded-2xl px-30 overflow-hidden shadow-lg bg-white transition-all duration-300 hover:shadow-2xl relative">
+    <div className="rounded-2xl pt-20 overflow-hidden shadow-lg bg-white transition-all duration-300 hover:shadow-2xl relative">
       <img src={e.flyerUrl} alt={e.title} className="w-full h-64 object-cover" />
       <div className="p-4 text-[#080F59]">
         <h3 className="text-lg font-semibold mb-1">{e.title}</h3>
