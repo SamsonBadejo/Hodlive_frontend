@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export default function Loading({ title }) {
   return (
-    <div className="flex flex-col items-center justify-center min-h-[50vh] gap-6">
+    <div className="flex flex-col items-center justify-center min-h-[50vh] gap-6 pt-10">
       <motion.h2
         className="text-3xl font-bold   text-white"
         initial={{ opacity: 0, y: -20 }}
