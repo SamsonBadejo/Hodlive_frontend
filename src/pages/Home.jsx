@@ -19,7 +19,7 @@ const Home = () => {
       <ServiceTime />
 
       <Title titles="EVENTS" />
-      <div className="bg-[#030629] hidden sm:block md:hidden lg:hidden">
+      <div className="bg-[#030629]  sm:block md:hidden lg:hidden">
         <EventSwiper />
       </div>
 
