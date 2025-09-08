@@ -1,5 +1,4 @@
 import HeroImg from "../assets/hero_img.jpg";
-import HeroImg2 from "../assets/Pastor Attah.jpg";
 
 const AboutConvener = () => {
   return (
@@ -15,7 +14,7 @@ const AboutConvener = () => {
         {/* Pastor Image Section */}
         <div className="flex justify-center">
           <img
-            src={HeroImg2}
+            src=""
             alt="Pastor Attah Ogbolu"
             className="w-[280px] h-[280px] object-cover rounded-full border-4 border-yellow-500 shadow-xl"
           />

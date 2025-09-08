@@ -45,20 +45,23 @@ export default function EventSwiper() {
   const [showHint, setShowHint] = useState(true);
   const [userSwiped, setUserSwiped] = useState(false);
 
-  useEffect(() => {
-    const fetchEvents = async () => {
-      try {
-        const res = await fetch("http://localhost:5001/api/events");
-        const data = await res.json();
-        setEvents(data);
-      } catch (err) {
-        console.error("Error fetching events:", err);
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetchEvents();
-  }, []);
+const baseURL = import.meta.env.VITE_API_URL || "http://localhost:5001/api";
+
+useEffect(() => {
+  const fetchEvents = async () => {
+    try {
+      const res = await fetch(`${baseURL}/events`);
+      const data = await res.json();
+      setEvents(data);
+    } catch (err) {
+      console.error("Error fetching events:", err);
+    } finally {
+      setLoading(false);
+    }
+  };
+  fetchEvents();
+}, []);
+
 
   useEffect(() => {
     if (!userSwiped) {

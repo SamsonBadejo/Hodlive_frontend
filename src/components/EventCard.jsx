@@ -33,20 +33,23 @@ export default function EventList() {
   const [showHint, setShowHint] = useState(true); // 👈 to show guide only once
   const eventsPerPage = 4;
 
-  useEffect(() => {
-    const fetchEvents = async () => {
-      try {
-        const res = await fetch("http://localhost:5001/api/events");
-        const data = await res.json();
-        setEvents(data);
-      } catch (err) {
-        console.error("Error fetching events:", err);
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetchEvents();
-  }, []);
+const baseURL = import.meta.env.VITE_API_URL || "http://localhost:5001/api";
+
+useEffect(() => {
+  const fetchEvents = async () => {
+    try {
+      const res = await fetch(`${baseURL}/events`);
+      const data = await res.json();
+      setEvents(data);
+    } catch (err) {
+      console.error("Error fetching events:", err);
+    } finally {
+      setLoading(false);
+    }
+  };
+  fetchEvents();
+}, []);
+
 
   const today = new Date();
   const sortedEvents = [...events].sort(
