@@ -12,7 +12,6 @@ const links = [
   { path: "/tithes", label: "Tithes/Donate" },
   { path: "/events", label: "Events" },
   { path: "/gallery", label: "Gallery" },
-  { path: "/admin/login", label: "Login" },
 ];
 
 const Navbar = () => {
