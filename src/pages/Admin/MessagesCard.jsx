@@ -15,7 +15,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import api from "../../services/api";
 import toast from "react-hot-toast";
 
-const PAGE_SIZE = 6;
+const PAGE_SIZE = 8;
 
 const MessagesCard = () => {
   const [messages, setMessages] = useState([]);
