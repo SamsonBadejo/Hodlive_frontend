@@ -86,7 +86,7 @@ const MessagesCard = () => {
     str.length > len ? str.slice(0, len).trimEnd() + "…" : str;
 
   return (
-    <section className="w-full flex justify-center px-4 pt-30">
+    <section className="w-full h-screen flex justify-center px-4 pt-30">
       <div className="w-full max-w-4xl ml-auto lg:mr-30">
         {/* Filters */}
         <div className="flex flex-wrap items-center gap-2 mb-6 justify-center">
